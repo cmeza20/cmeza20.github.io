@@ -1,0 +1,67 @@
+# Configurations
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+highlighter: pygments
+
+# Needed for backward compatibility
+gems: [jekyll-paginate]
+
+# Permalinks
+permalink:        /blog/:year/:month/:day/:title
+
+# Setup
+title:            'Carlos Meza Yana'
+tagline:          'Personal site'
+description:      'Personal site'
+url:              'http://www.cmeza.com'
+baseurl:          ''
+
+# Navigation
+navigation:
+- text: Acerca de
+  url: /about/
+- text: Curriculum
+  url: /resume/
+- text: Blog
+  url: /blog/
+- text: Tags
+  url: /tags/
+- text: Archivo
+  url : /archive/
+- text: Buscar
+  url: /search/
+
+
+# Author Details
+author:         'Carlos Meza Yana'
+
+#Social Media links (Use complete URL except for email)
+dribbble:
+email:
+facebook:       'https://www.facebook.com/cmeza20'
+flickr:
+github:         'https://github.com/cmeza20'
+gplus:          'https://plus.google.com/114049385137879692370/'
+instagram:
+pinterest:
+linkedin:       'https://www.linkedin.com/in/carlos-meza-yana/'
+rss:
+stackoverflow:  'https://es.stackoverflow.com/users/36117/carlos-meza'
+twitter:        'https://twitter.com/elcinetv'
+
+# Google Analytics
+gahandler: 'UA-96985981-1'
+
+#if footersvg is 'true' the social media links will be shown top on the copy right in the footer
+footersvg: 'false'
+
+# Disqus
+disqushandler: 'cmeza'
+
+# Blog Configurations
+paginate: 10 # Posts per page on the blog index
+paginate_path: '/blog/page:num'
+destination: ./_site
+
+# Custom vars
+version:          0.9x beta 2

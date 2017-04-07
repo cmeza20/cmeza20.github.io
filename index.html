@@ -1,0 +1,135 @@
+---
+layout: master
+title: Home
+description: Home Page for personal site
+---
+
+<div class="container">
+
+	<header class="row">
+	  <div class="col-sm-6 col-md-12" style="margin-top:25px;margin-bottom:25px">
+	    <h1 id="pin">{{site.title}}</h1>
+	  </div>
+	</header>
+	<nav>
+		<div class="row">
+ 			<div class="col-md-6 col-sm-6 col-xs-12">
+				<a href="about/" title="Acerca de">					
+					<div class="tile purple profile">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-xs-4" style="vertical-align: middle">
+								<img class="image-center" src="{{ site.url }}/assets/images/profile.png" style="border-radius: 50%;width: 100%;max-width:120px;height:auto"/>
+							</div>
+													
+							<div class="col-md-8 col-sm-8 col-xs-8">
+								<h2 class="title">Acerca de</h2>
+								<p>Hola, soy {{site.author}}.</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</a>
+		    </div>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="resume/" title="Curriculum" class="tile red">
+					<i class="icon-rems" style="font-size:8em"></i>
+				</a>
+			</div>
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="blog/" title="Blog"  class="tile orange">
+					<i class="icon-blog" style="font-size:8em"></i>
+				</a>
+			</div>
+			<div class="col-md-2 col-sm-3 col-xs-6 visible-md visible-lg">
+				<a href="feed.xml" title="RSS Feed" class="tile orange">
+					<i class="icon-rss" style="font-size:8em"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				{% for post in site.posts offset:1 limit:1 %}
+				<a href="{{post.url}}" title="Articulo Reciente">
+					<div class="tile green">
+						<h3 class="title">Articulo Reciente</h3>
+						<h4 class="title">{{ post.title }}</h4>
+						<p> {{ post.content | strip_html | truncatewords: 20 }}</p>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
+
+
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				{% for post in site.posts limit:1 %}
+				<a href="{{post.url}}" title="Ultimo Articulo">
+					<div class="tile red">
+						<h3 class="title">Ultimo Articulo</h3>
+						<h4 class="title">{{ post.title }}</h4>
+						<p> {{ post.content | strip_html | truncatewords: 20 }}</p>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				{% for post in site.posts %}
+					{% if post.featured == true %}
+					<a href="{{post.url}}" title="Articulo Destacado">
+						<div class="tile orange">
+							<h3 class="title">Articulo Destacado</h3>
+							<h4 class="title">{{ post.title }}</h4>
+							<p> {{ post.content | strip_html | truncatewords: 20 }}</p>
+						</div>
+					</a>
+					{% break %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="row" style="margin-bottom:25px">
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.twitter}}" title="Twitter" class="tile blue" target="_blank">
+					<i class="icon-twtr" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.gplus}}" title="Google Plus"  class="tile orange" target="_blank">
+					<i class="icon-gpls" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.facebook}}" class="tile blue" target="_blank">
+					<i class="icon-fcbk" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+
+				<a href="{{site.github}}" title="Github" class="tile purple" target="_blank">
+					<i class="icon-gthb" style="font-size:8em"></i>
+				</a>
+
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.linkedin}}" title="LinkedIn" class="tile blue" target="_blank">
+					<i class="icon-lkin" style="font-size:8em"></i>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-sm-3 col-xs-6">
+				<a href="{{site.stackoverflow}}" title="StackOverflow" class="tile darken" target="_blank">
+					<i class="icon-skow" style="font-size:8em;color:white"></i>
+				</a>
+			</div>
+
+		</div>
+	</nav>
+</div>
