@@ -4,11 +4,12 @@ title: Curriculum
 description: Resume of Abdel Raoof
 theme: red
 ---
-
+<hr/>
 Cuatro años de experiencia en desarrollo de software en tecnologías Java y Microsoft. Experiencia en diseño y desarrollo de aplicaciones web empresariales, sistemas de gestión de contenidos y integración de aplicaciones empresariales.
 
 Profesional de Tecnologías de la Información, con sólida experiencia en desarrollo e implementación de proyectos, buen nivel de competencia en el manejo de herramientas. Orientado y habituado al cumplimiento de metas. Capacidad de trabajo en equipo, facilidad para desarrollar y mantener relaciones personales a todo nivel.
 
+<hr/>
 <!-- Skills -->
 <section class="row">
 	<header class="col-md-3">
